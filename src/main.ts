@@ -142,7 +142,8 @@ async function handleSearch(event: Event) {
     const searchResult = await search(restaurantDB, {
         term: searchTerm,
         properties: ["Name", "Address", "Location", "Cuisine"],
-        tolerance: 3,
+        tolerance: 1,
+        boost: { Name: 3 },
         limit: 20,
     });
 
