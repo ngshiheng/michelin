@@ -5,7 +5,7 @@ const summary = document.getElementById("search-summary");
 const table = document.getElementById("search-results");
 
 async function createLyraInstance(event: Event) {
-    const endpoint = "data/data.json";
+    const endpoint = "data.json";
     const response = await fetch(endpoint);
     const data = await response.json();
 
